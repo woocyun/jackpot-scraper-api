@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const rp = require('request-promise');
 const cheerio = require('cheerio');
+const cron = require('node-cron');
 
 const url = 'http://www.lotteryusa.com/lottery/jackpot/jackpot_fcur.html';
 const dataLocation = path.resolve(__dirname, 'data', 'lotteries.json');
@@ -29,7 +30,7 @@ function onReadFileSuccess(data) {
       .map(function () {
         return {
           name: $(this).children().text(),
-          jackpot: $(this).siblings('.jackpot').children('.next-jackpot').text()
+          jackpot: Number($(this).siblings('.jackpot').children('.next-jackpot').text().replace(/[^0-9\.]+/g,""))
         };
       })
       .get();
@@ -44,7 +45,7 @@ function updateLotteries(games, parsed) {
       const game = games.find(game => game.name === lottery.name);
 
       if (game) {
-        console.log(`setting ${ game.name }'s jackpot to ${ game.jackpot }'`);
+        console.log(`setting ${ game.name }'s jackpot to ${ game.jackpot }`);
         return Object.assign({}, lottery, game);
       } else {
         return lottery;
@@ -59,5 +60,8 @@ function updateLotteries(games, parsed) {
 }
 
 module.exports = function () {
-  updateJackpots();
+  cron.schedule('0 * * * *', () => {
+    console.log(`cron running at ${ new Date() }`);
+    updateJackpots();
+  });
 };
