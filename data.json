@@ -1,0 +1,122 @@
+{
+    "lotteries": [
+        {
+            "common": {
+                "picks": 5,
+                "qty": 75
+            },
+            "name": "Mega Millions",
+            "prizes": [
+                {
+                    "common": 0,
+                    "prize": 1,
+                    "special": 1
+                },
+                {
+                    "common": 1,
+                    "prize": 2,
+                    "special": 1
+                },
+                {
+                    "common": 2,
+                    "prize": 5,
+                    "special": 1
+                },
+                {
+                    "common": 3,
+                    "prize": 5,
+                    "special": 0
+                },
+                {
+                    "common": 3,
+                    "prize": 50,
+                    "special": 1
+                },
+                {
+                    "common": 4,
+                    "prize": 500,
+                    "special": 0
+                },
+                {
+                    "common": 4,
+                    "prize": 5000,
+                    "special": 1
+                },
+                {
+                    "common": 5,
+                    "prize": 1000000,
+                    "special": 0
+                },
+                {
+                    "common": 5,
+                    "prize": 100000000,
+                    "special": 1
+                }
+            ],
+            "special": {
+                "picks": 1,
+                "qty": 15
+            },
+            "jackpot": "$47,000,000"
+        },
+        {
+            "common": {
+                "picks": 5,
+                "qty": 69
+            },
+            "name": "Powerball",
+            "prizes": [
+                {
+                    "common": 0,
+                    "prize": 4,
+                    "special": 1
+                },
+                {
+                    "common": 1,
+                    "prize": 4,
+                    "special": 1
+                },
+                {
+                    "common": 2,
+                    "prize": 7,
+                    "special": 1
+                },
+                {
+                    "common": 3,
+                    "prize": 7,
+                    "special": 0
+                },
+                {
+                    "common": 3,
+                    "prize": 100,
+                    "special": 1
+                },
+                {
+                    "common": 4,
+                    "prize": 100,
+                    "special": 0
+                },
+                {
+                    "common": 4,
+                    "prize": 50000,
+                    "special": 1
+                },
+                {
+                    "common": 5,
+                    "prize": 1000000,
+                    "special": 0
+                },
+                {
+                    "common": 5,
+                    "prize": 60000000,
+                    "special": 1
+                }
+            ],
+            "special": {
+                "picks": 1,
+                "qty": 26
+            },
+            "jackpot": "$217,000,000"
+        }
+    ]
+}
