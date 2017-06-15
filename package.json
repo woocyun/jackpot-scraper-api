@@ -18,6 +18,7 @@
   "homepage": "https://github.com/woocyun/lottery-simulator#readme",
   "devDependencies": {
     "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
     "node-cron": "^1.2.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
